@@ -7,7 +7,7 @@
 
 .page {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   overflow-y: hidden;
   background-image: url(../images/background.jpg);
   background-size: cover;
@@ -21,6 +21,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /*margin: 0 auto;*/
 }
 
 .title__super {
@@ -38,61 +39,29 @@
 }
 
 .container__slider {
+  /*margin-top: 6rem;*/
   width: 90vw;
   height: auto;
+  max-width: 900px;
   border-radius: 10px;
   overflow: hidden;
+  margin: auto;
   position: relative;
 }
 
 .slider {
-  width: 704%;
-  height: auto;
+  width: 700%;
+  max-height: 670px;
   display: flex;
-  padding-bottom: 20px;
-}
-
-.slides__button {
-  display: none;
-}
-
-.slides__section {
-  transition: 1.4s;
-}
-
-.slide__img {
-  width: 90vw;
-  height: auto;
-}
-
-.navigation__manual {
-  width: 90vw;
-  display: flex;
-  justify-content: center;
-}
-
-.manual--btn {
-  border: 2px solid white;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.8s;
-}
-
-.manual--btn:not(:last-child) {
-  margin-right: 40px;
-}
-
-.manual--btn:hover {
-  background: white;
 }
 
 .slider__btn {
   width: 40px;
   height: 40px;
   position: absolute;
-  background: rgba(255, 255, 255, 0.26);
-  top: 40%;
+  background: rgba(255, 255, 255, 0.445);
+  top: 50%;
+  transform: translateY(-50%);
   border-radius: 50%;
   line-height: 40px;
   font-size: 20px;
@@ -112,4 +81,66 @@
 }
 .slider__btn--left {
   left: 5px;
+}
+
+.slides__button {
+  display: none;
+}
+
+.slides__section {
+  width: 12, 5%;
+  height: auto;
+  transition: 1.4s;
+}
+
+.slide__img {
+  display: block;
+  width: 100%;
+  max-height: 670px;
+}
+
+.navigation__manual {
+  width: 90vw;
+  padding: 10px;
+  transform: scale(1.2);
+  display: flex;
+  justify-content: center;
+}
+
+.manual--btn {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual--btn:not(last-child) {
+  margin-right: 10px;
+}
+
+.manual--btn:hover {
+  background: white;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+#radio2:checked ~ .first {
+  margin-left: -12.5%;
+}
+#radio3:checked ~ .first {
+  margin-left: -25%;
+}
+#radio4:checked ~ .first {
+  margin-left: -37.5%;
+}
+#radio5:checked ~ .first {
+  margin-left: -62.5%;
+}
+#radio6:checked ~ .first {
+  margin-left: -75%;
+}
+#radio7:checked ~ .first {
+  margin-left: -87.5%;
 }
